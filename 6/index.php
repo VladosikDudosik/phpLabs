@@ -59,7 +59,7 @@ function GetDataFromFile($fileName){
             
         }
     }else{
-        throw new IOException();
+        throw new RuntimeException();
     }
     return $arr;
 }
