@@ -27,7 +27,7 @@
                     <input type='hidden' name='id' value='" . $row["id"] . "' />
                     <input type='submit' value='Delete'>
                 </form>
-                <form action='edit.php' method='get'>
+                <form action='edit.php'>
                     <input type='hidden' name='id' value='" . $row["id"] . "' />
                     <input type='hidden' name='operationName' value='" . $row["name"] . "' />
                     <input type='submit' value='Edit'>
