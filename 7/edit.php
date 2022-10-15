@@ -45,7 +45,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET' && $result = $conn->query($sql)){
         echo "<h3>Редагування</h3>
             <form method='post'>
                 <input type='hidden' name='id' value='$id' />
-                <p>Операція: $operationName
+                <p>Операція:
                     <select name='optype'>$operation_options
                     </select>
                 </p>

@@ -82,7 +82,7 @@
         .main{
             display: flex;
             justify-content: space-between;
-            width: 60%;
+            width: 90%;
             margin:0 auto;
         }
         #addForm{
@@ -102,7 +102,6 @@
         #addForm input[name="opdata"]{
             width: 100%;
         }
-        
         .formContainer{
             margin-top: 10px;
             border: black bold 1px;
@@ -120,7 +119,7 @@
         
     </style>
     <body>
-        <h1 style="text-align:center;margin:20px;">Взаємодія з базою даних phpMyAdmin</h1>
+        <h1 style="text-align:center;margin:20px;">phpLabs</h1>
         <div class="main">
             <table>
                 <thead>
