@@ -2,7 +2,7 @@ $(document).ready(function(){
     let link = "result.json"
     $.get(link,function(data){
         for ( let i = 0 ; i < data.length; i++){
-            $("tbody").append(`<tr>
+            $(".jstable").append(`<tr>
             <td>${data[i]['id']}</td>
             <td>${data[i]['name']}</td>                                
             <td>${data[i]['inputdata']}</td>

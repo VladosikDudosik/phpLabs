@@ -1,6 +1,3 @@
-body{
-    /*background-color:bisque;*/
-}
 *{
     margin: 0;
     padding: 0;
@@ -10,7 +7,7 @@ table {
     font-size: 14px;
     border-collapse: collapse;
     text-align: center;
-    width: 700px;
+    width: 600px;
 }
 th, td:first-child {
     background: #AFCDE7;
@@ -30,15 +27,17 @@ th:first-child, td:first-child {
 }
 .main{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     width: 90%;
     margin:0 auto;
 }
 #addForm{
+    margin: 50px auto 50px auto ;
     width: max-content;
     padding: 40px;
     background-color:#D8E6F3 ;
     border-radius: 20px;
+    height: max-content;
 }
 #addForm h2{
     text-align: center;
