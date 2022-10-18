@@ -1,4 +1,5 @@
 <?php
+
 function jsonToTable($json){
     $res = '';
     for($i = 0 ; $i < count($json); $i++){
@@ -22,14 +23,13 @@ function jsonToTable($json){
     }
     return $res;
 }
+
     $servername = "localhost";
     $username = "root";
     $password = "1234";
     $database = "phplab";
-    // Create connection
     $conn = new mysqli($servername, $username, $password, $database);
 
-    // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
@@ -59,10 +59,8 @@ function jsonToTable($json){
     $conn->close();
 
     $ch = curl_init("http://localhost/phpLabs/8/result.json");
-    //Set CURLOPT_RETURNTRANSFER to TRUE
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-    //Execute the cURL transfer.
     $curlResult =json_decode(curl_exec($ch));
     curl_close($ch);
     $curlTable = jsonToTable($curlResult);
