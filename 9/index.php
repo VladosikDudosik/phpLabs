@@ -5,6 +5,7 @@ session_start();
 if(!isset($_SESSION['log_in'])){
     header('Location: actions/login.php');
 }   
+
     $selectAllOperations = 'SELECT * FROM operations';
     $dataQuery =  'SELECT data.id, operations.name, data.inputdata, data.outputdata FROM data join operations on data.operationid = operations.id';
     
