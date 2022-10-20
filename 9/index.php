@@ -2,7 +2,7 @@
 include('lib/connect.php');
 include('lib/functions.php');
 session_start();
-if(!isset($_SESSION['log_in'])){
+if(!isset($_SESSION['login'])){
     header('Location: actions/login.php');
 }   
 

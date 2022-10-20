@@ -1,7 +1,7 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT']."/phpLabs/9/lib/connect.php");
 session_start();
-if (isset($_SESSION['log_in'])){
+if (isset($_SESSION['login'])){
 	header('Location: ../index.php');
 }
 ?>
@@ -18,7 +18,7 @@ if (isset($_SESSION['log_in'])){
 <form id="loginForm" action="do_login.php" method="post">
 	<div class="field">
 		<label>Ім'я користувача:</label>
-		<div class="input"><input type="text" name="log_in" value="" id="login" required/></div>
+		<div class="input"><input type="text" name="login" value="" id="login" required/></div>
 	</div>
 
 	<div class="field">
