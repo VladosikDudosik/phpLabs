@@ -1,7 +1,8 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT']."/phpLabs/9/lib/connect.php");
-if(isset($_SESSION['log_in'])){
-	header('Location: /phpLabs/9/index.php');
+session_start();
+if (isset($_SESSION['log_in'])){
+	header('Location: ../index.php');
 }
 ?>
 <!DOCTYPE html>
@@ -28,10 +29,16 @@ if(isset($_SESSION['log_in'])){
 
 	<div class="submit">
 		<button type="submit">Войти</button>
-		<label id="remember"><input name="" type="checkbox" value="" /> Запомнить меня</label>
+		<label id="remember"><input name="" type="checkbox" value="" />Запам'ятати мене</label>
 	</div>
-
+	<?php 
+		if (isset($_SESSION['message'])){
+			echo '<p style="text-align:center;color:red;">'. $_SESSION['message'].'</p>';
+			unset($_SESSION['message']);
+		}
+	?>
 </form>
+
 
 </body>
 </html>

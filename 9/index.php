@@ -1,9 +1,10 @@
 <?php  
 include('lib/connect.php');
 include('lib/functions.php');
-if(!isset($_SESSION['login'])){
-    header("Location: actions/login.php");
-}
+session_start();
+if(!isset($_SESSION['log_in'])){
+    header('Location: actions/login.php');
+}   
     $selectAllOperations = 'SELECT * FROM operations';
     $dataQuery =  'SELECT data.id, operations.name, data.inputdata, data.outputdata FROM data join operations on data.operationid = operations.id';
     
@@ -41,12 +42,13 @@ if(!isset($_SESSION['login'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lab9</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <a href="actions/exit.php" style="float:right;">Вийти</a>
 <h1 style="text-align:center;margin:20px;">phpLabs</h1>
 
     <form method="POST" action="actions/insert.php" id = 'addForm'>
